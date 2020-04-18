@@ -57,6 +57,25 @@ let recorriendofilter = miFilter(arreglonumfil, function (element) {
 console.log("Ejercicios 03-filter", recorriendofilter); 
 
 
+//ejercicio 04
+let arreglonumredu = [4, 8, 12, 13, 15, 16, 19, 22];
+function miReduce(arr, fn) {
+  let nuevoArrayRed = [];
+  arr.forEach(function (element, index, arr) {
+    if (fn(element, index, arr)) {
+      nuevoArrayRed.push(element);
+    }
+  }
+  );
+  return nuevoArrayRed;
+}
+let totalsuma=0;
+let recorriendoreduce = miReduce(arreglonumredu, function (element) {
+  return totalsuma +=(+element);
+}
+);
+console.log("Ejercicios 04-reduce", recorriendoreduce); 
+
 
 
 
