@@ -70,11 +70,17 @@ function miReduce(arr, fn) {
   return nuevoArrayRed;
 }
 let totalsuma=0;
+
 let recorriendoreduce = miReduce(arreglonumredu, function (element) {
-  return totalsuma +=(+element);
+  return element;
 }
 );
-console.log("Ejercicios 04-reduce", recorriendoreduce); 
+
+recorriendoreduce.forEach(function (recorre){
+totalsuma += (+ recorre);
+}
+);
+console.log("Ejercicios 04-reduce", totalsuma); 
 
 
 
